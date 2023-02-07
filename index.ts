@@ -16,6 +16,13 @@ app.get("/authors", async (req: Request, res: Response) => {
   const authors = await prisma.user.findMany();
   return res.json(authors);
 });
+
+
+app.get("/autores", async (req: Request, res: Response) => {
+  const authors = await prisma.user.findMany();
+  return res.json(authors);
+});
+
 //GET ONE AUTHOR
 app.get("/author/:idUser", async (req: Request, res: Response) => {
   const idUser = Number(req.params.idUser);
