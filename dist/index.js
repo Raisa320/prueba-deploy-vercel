@@ -27,6 +27,10 @@ app.get("/authors", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     const authors = yield prisma.user.findMany();
     return res.json(authors);
 }));
+app.get("/autores", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const authors = yield prisma.user.findMany();
+    return res.json(authors);
+}));
 //GET ONE AUTHOR
 app.get("/author/:idUser", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const idUser = Number(req.params.idUser);
